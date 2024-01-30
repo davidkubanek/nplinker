@@ -122,7 +122,10 @@ pip install -q -U pip setuptools
 
 #--- Install BigScape
 echo "🔥 Start installing BigScape ..."
-    [[ -d BiG-SCAPE ]] || git clone https://github.com/medema-group/BiG-SCAPE.git
+    # previously
+    # [[ -d BiG-SCAPE ]] || git clone https://github.com/medema-group/BiG-SCAPE.git
+    # now
+    [[ -d BiG-SCAPE ]] || git clone https://github.com/davidkubanek/BiG-SCAPE.git
     cd BiG-SCAPE
     git config --add advice.detachedHead false  # disable advice
     git config pull.ff only
