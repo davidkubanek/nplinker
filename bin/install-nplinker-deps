@@ -119,6 +119,10 @@ pip install -q -U pip setuptools
 #------------------------------------------------------------------------------
 # Install NPLinker dependencies
 #------------------------------------------------------------------------------
+import os
+
+# Set the environment variable
+os.environ['SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL'] = 'True'
 
 #--- Install BigScape
 echo "🔥 Start installing BigScape ..."
@@ -132,7 +136,9 @@ echo "🔥 Start installing BigScape ..."
     git checkout master
     git pull
     git checkout 99d07e57882fc5fa6780f8254823fd3d1abf3bc6 # Commits on Jul 21, 2023
+    print('=== installing requirement.txt ===')
     pip install -q -U -r requirements.txt
+    print('=== running bigscape.py ===')
     chmod 754 bigscape.py
     chmod 664 domains_color_file.tsv
     chmod 775 Annotated_MIBiG_reference
