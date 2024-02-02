@@ -80,6 +80,8 @@ class NPLinker:
                 - dict: contents will be used to override values in the dict generated
                         from loading the configuration file(s)
         """
+        print('=== USING MY REPO ===')
+        
         # if userconfig is a string => create a dict with 'config' key and string as filename
         # if userconfig is a dict => pass it to Config() directly
         if isinstance(userconfig, str):
