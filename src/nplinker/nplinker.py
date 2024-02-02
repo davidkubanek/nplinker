@@ -145,6 +145,10 @@ class NPLinker:
         if len(repro_file) > 0:
             self.save_repro_data(repro_file)
 
+    def test_fun(self):
+        print('MY stuff')
+        return
+        
     def _collect_repro_data(self):
         """Creates a dict containing data to aid reproducible runs of nplinker.
 
